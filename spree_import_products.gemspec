@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_import_products'
-  s.version     = '3.1.0'
+  s.version     = '3.0.0'
   s.summary     = "spree_import_products ... imports products. From a CSV file via Spree's Admin interface"
   #s.description = 'Add (optional) gem description here'
-  s.required_ruby_version = '>= 2.2.2'
+  s.required_ruby_version = '>= 2.1.2'
 
   s.author            = '2BeDigital'
   s.email             = '2bedigital@2bedigital.com'
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
 
-  s.add_dependency('spree_core', '>= 3.1.0')
+  s.add_dependency('spree_core', '>= 3.0.0')
   s.add_dependency('spree_auth_devise')
   s.add_dependency('delayed_job_active_record')
   s.add_dependency('daemons')
