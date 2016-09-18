@@ -102,7 +102,7 @@ module Spree
         log("import data start",:debug)
         @products_before_import = Spree::Product.all
         @skus_of_products_before_import = @products_before_import.map(&:sku)
-        csv_string=open(self.data_file.path,"r:#{encoding_csv}").read.encode('utf-8')
+        csv_string=open(self.data_file.url,"r:#{encoding_csv}").read.encode('utf-8')
         rows = CSV.parse(csv_string, :col_sep => separatorChar)
 
         if ProductImport.settings[:first_row_is_headings]
