@@ -12,9 +12,7 @@ module Spree
 
     ENCODINGS= %w(UTF-8 iso-8859-1)
 
-    has_attached_file :data_file,
-      :path => "public/spree/product_imports/data-files/:basename_:timestamp.:extension",
-      :url => "/spree/product_imports/data-files/:basename_:timestamp.:extension"
+    has_attached_file :data_file
 
     validates_attachment_presence :data_file
     #Content type of csv vary in different browsers.
