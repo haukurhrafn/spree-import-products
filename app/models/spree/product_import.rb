@@ -60,7 +60,7 @@ module Spree
     end
     #Return the number of rows in CSV.
     def productsCount
-      rows = CSV.parse(open(self.data_file.path).read, :col_sep => separatorChar)
+      rows = CSV.parse(open(self.data_file.url).read, :col_sep => separatorChar)
 			#rows = CSV.parse(open(self.data_file.url).read, :col_sep => ",", :quote_char => "'")
       return rows.count
     end
