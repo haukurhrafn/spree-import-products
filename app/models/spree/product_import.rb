@@ -479,7 +479,7 @@ module Spree
 
       taxon_hierarchy.split(/\s*\|\s*/).each do |hierarchy|
         hierarchy = hierarchy.split(/\s*>\s*/)
-        taxonomy = Spree::Taxonomy.find_by_name(hierarchy.first.capitalize).first
+        taxonomy = Spree::Taxonomy.find_by(name: hierarchy.first.capitalize)
         taxonomy = Taxonomy.create(:name => hierarchy.first.capitalize) if taxonomy.nil? && ProductImport.settings[:create_missing_taxonomies]
         last_taxon = taxonomy.root
 
